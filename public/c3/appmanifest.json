@@ -2,7 +2,7 @@
 	"name": "Petits Chevaux",
 	"short_name": "Petits Chevaux",
 	"description": "",
-	"start_url": "index.html",
+	"start_url": "game.html",
 	"display": "fullscreen",
 	"orientation": "landscape",
 	"background_color": "#e9e2da",

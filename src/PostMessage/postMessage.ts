@@ -11,7 +11,8 @@ const targetOrigin = [
     "http://localhost:5000", 
     "https://c3demo.stranianelli.com", 
     "https://el3um4s.github.io", 
-    "https://el3um4s.itch.io"
+    "https://el3um4s.itch.io",
+    `${globalThis.location.origin}`
 ];
 // const targetOrigin = "http://localhost:5000";
 // const targetOrigin = "https://c3demo.stranianelli.com";
@@ -31,6 +32,7 @@ export function attachListeners() {
 }
 
 function getMessage(event: MessageEvent) {
+    console.log(event);
     if (!targetOrigin.includes(event.origin)) {
         console.log("Error, wrong origin");
     } else {
