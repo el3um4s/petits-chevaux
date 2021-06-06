@@ -1,9 +1,14 @@
 <script  lang="ts">
     export let construct3: HTMLIFrameElement;
+
+    console.log(window.location.origin);
+    const src = (window.location.origin === "https://el3um4s.itch.io") ? "https://el3um4s.github.io/petits-chevaux/c3/index.html" : "c3/index.html";
+    
 </script>
 
-<iframe title="C3" bind:this="{construct3}" src="./c3/index.html" scrolling="no" noresize="noresize" /> 
+<iframe title="C3" bind:this="{construct3}" {src} scrolling="no" noresize="noresize" /> 
 
+<!-- <iframe title="C3" bind:this="{construct3}" src="./c3/index.html" scrolling="no" noresize="noresize" />  -->
 <!-- <iframe title="C3" bind:this="{construct3}" src="https://c3demo.stranianelli.com/template/020-petits-chevaux/demo/index.html" scrolling="no" noresize="noresize" />  -->
 
 <style>
