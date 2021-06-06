@@ -1,9 +1,16 @@
 <script  lang="ts">
     export let construct3: HTMLIFrameElement;
 
+    const targetOrigin = [
+        "http://localhost:5000", 
+        "https://c3demo.stranianelli.com", 
+        "https://el3um4s.github.io", 
+        // "https://el3um4s.itch.io"
+    ];
+
     console.log(window.location.origin);
-    const src = (window.location.origin === "https://el3um4s.itch.io") ? "https://el3um4s.github.io/petits-chevaux/c3/index.html" : "c3/index.html";
-    
+    // const src = (window.location.origin === "https://el3um4s.itch.io") ? "https://el3um4s.github.io/petits-chevaux/c3/index.html" : "c3/index.html";
+    const src = targetOrigin.includes(window.location.origin) ? "./c3/index.html" : "https://el3um4s.github.io/petits-chevaux/c3/index.html";
 </script>
 
 <iframe title="C3" bind:this="{construct3}" {src} scrolling="no" noresize="noresize" /> 
