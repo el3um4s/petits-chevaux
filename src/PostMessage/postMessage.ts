@@ -7,7 +7,9 @@ export interface Message {
     content: string;
 }
 
-const targetOrigin = "http://localhost:5000";
+// const targetOrigin = "http://localhost:5000";
+// const targetOrigin = "https://c3demo.stranianelli.com";
+const targetOrigin = "https://el3um4s.github.io/petits-chevaux"
 
 export function sendMessage(iframe: HTMLIFrameElement, message: Message, targetOrigin: string = "*") {
     iframe.contentWindow.postMessage(message, targetOrigin);
